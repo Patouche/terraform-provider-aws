@@ -56,7 +56,7 @@ resource "aws_kinesis_stream" "test_stream" {
 
 ## Example SSM Document Usage
 
-```
+```hcl
 data "aws_iam_policy_document" "ssm_lifecycle_trust" {
   statement {
     actions = ["sts:AssumeRole"]
@@ -145,8 +145,7 @@ resource "aws_cloudwatch_event_target" "stop_instances" {
 
 ## Example RunCommand Usage
 
-```
-
+```hcl
 resource "aws_cloudwatch_event_rule" "stop_instances" {
   name                = "StopInstance"
   description         = "Stop instances nightly"
